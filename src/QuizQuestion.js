@@ -3,7 +3,7 @@ import QuizQuestionButton from './QuizQuestionButton'
 
 class QuizQuestion extends Component {
 
-    handleClick = (buttonText) => {
+    handleClick (buttonText){
         console.log('handle click... QuizQuestion', buttonText);
         console.log(this.props.quiz_question.answer);
 
@@ -22,9 +22,9 @@ class QuizQuestion extends Component {
                 <ul>
                     {
                         this.props.quiz_question.answer_options.map(
-                            index => <QuizQuestionButton 
+                            (answer_option, index) => <QuizQuestionButton 
                                 key={index} 
-                                button_text={index} 
+                                button_text={answer_option} 
                                 clickHandler={this.handleClick.bind(this)}
                                 />
                         )

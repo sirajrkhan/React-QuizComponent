@@ -12,7 +12,7 @@ class Quiz extends Component {
         }
     }
 
-    showNextQuestion = () => {
+    showNextQuestion (){
         console.log('in showNextQuestion');
         this.setState(
             {quiz_position : this.state.quiz_position + 1 }
